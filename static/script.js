@@ -14,8 +14,9 @@ const PROCESSING_ANIMATION_URL = "/static/robot process automation.json";
 const STORAGE_KEY = "chatHistory";
 
 // --- Backend API Endpoint ---
-const API_URL = "http://localhost:8000/chat"; // Your FastAPI chat endpoint
-// If your FastAPI is hosted elsewhere, change 'localhost:8000' to your domain/IP.
+// Use relative path so it works both locally (when proxied) and on Railway
+const API_URL = "/chat"; // FastAPI chat endpoint on the same host
+// If hosting backend on a different domain, replace with full URL
 
 // --- User ID (for session management with backend) ---
 let currentUserId = localStorage.getItem('chatbot_user_id');
