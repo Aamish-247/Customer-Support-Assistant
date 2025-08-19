@@ -36,12 +36,8 @@ The system consists of a backend API and a simple web frontend. The backend hand
 
 ## Installation  
 
-Clone the repository (if applicable).
-Create a virtual environment:
-Bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
+source venv/bin/activate # On Windows: venv\Scripts\activate
 
 Install dependencies:
 Install requirements.txt
