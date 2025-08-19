@@ -6,3 +6,5 @@ pydantic
 faiss-cpu
 python-dotenv
 Langchain-groq
+fastapi
+uvicorn
