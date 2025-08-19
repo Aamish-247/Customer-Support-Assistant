@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛎️ Customer Support Chatbot  
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)  
@@ -129,4 +130,5 @@ Edit
 │   ├── script.js                # Frontend JS
 │   ├── index.html               # Chatbot UI
 │   └── home.html                # Home page
-└── Fragrance Wholesale Sheet .csv  # Product dataset
+└── Fragrance Wholesale Sheet .csv  # Product dataset└── Fragrance Wholesale Sheet .csv  # Product dataset
+=======
