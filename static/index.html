@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Chatbot</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="chat_container">
+        <div class="chat_header">
+            <h1 id="animated-heading">Hi, I am hearing your questions</h1> <h3>(Customer Support Agent Available 24/7)</h3>
+        </div>
+
+        <div class="chat_message" id="chat-message">
+            <div id="bot-animation-container">
+                <div id="lottie-animation"></div>
+            </div> 
+
+            <div id="messages-list"></div>
+        </div>
+           
+        <div class="user_input">
+            <input type="text" id="user_message" placeholder="Type your message here.....">
+            <button id="send_button">Send</button>
+            <button id="exit_button">Exit</button>
+        </div>
+            
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

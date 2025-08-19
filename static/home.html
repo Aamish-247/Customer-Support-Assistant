@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Chatbot</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <style>
+        /* --- Dark Neon Style for Home Page --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e); /* Dark background */
+            color: #fff;
+            overflow: hidden; 
+        }
+
+        .home-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            background-color: #151525;
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid #7d4bff;
+            box-shadow: 0 0 25px rgba(125, 75, 255, 0.8),
+                        0 0 50px rgba(125, 75, 255, 0.4);
+            max-width: 900px;
+            width: 90%;
+            text-align: center;
+            animation: fadeInScale 1s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .welcome-section h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8em;
+            color: #eee4ff; /* Neon purple */
+            margin-bottom: 10px;
+            animation: slideInLeft 1s ease-out forwards;
+            animation-delay: 0.2s;
+            text-shadow: 0 0 12px rgba(179,136,255,0.8);
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin-bottom: 30px;
+            animation: slideInRight 1s ease-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #start-chat-button {
+            background: linear-gradient(45deg, #7d4bff, #4a00e0);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(125, 75, 255, 0.8);
+            animation: popIn 0.8s ease-out forwards;
+            animation-delay: 0.6s;
+        }
+
+        #start-chat-button:hover {
+            background: linear-gradient(45deg, #b388ff, #7d4bff);
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(179, 136, 255, 0.9);
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Lottie Animation Section */
+        .animation-section {
+            width: 250px;
+            height: 250px;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 0.8s;
+        }
+
+        #home-lottie-animation {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .home-container {
+                flex-direction: row;
+                text-align: left;
+                padding: 50px;
+                gap: 60px;
+            }
+            .welcome-section {
+                flex: 1;
+            }
+            .animation-section {
+                flex-shrink: 0;
+                width: 300px;
+                height: 300px;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <div class="welcome-section">
+            <h1>Welcome to Our Smart Chatbot!</h1>
+            <p>Your 24/7 customer support and assistant.</p>
+            <button id="start-chat-button">Start Chat</button>
+        </div>
+
+        <div class="animation-section">
+            <div id="home-lottie-animation"></div>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+
+   <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        console.log("DOM Content Loaded for home page.");
+
+        const startChatButton = document.getElementById('start-chat-button');
+        const homeLottieAnimation = document.getElementById('home-lottie-animation');
+
+        const HOME_BOT_ANIMATION_URL = "/static/Man and robot with computers sitting together in workplace.json";
+
+        if (homeLottieAnimation) {
+            const player = document.createElement('lottie-player');
+            player.setAttribute('src', HOME_BOT_ANIMATION_URL);
+            player.setAttribute('background', 'transparent');
+            player.setAttribute('speed', '1');
+            player.setAttribute('loop', 'true');
+            player.setAttribute('autoplay', 'true');
+            player.style.width = '100%';
+            player.style.height = '100%';
+            homeLottieAnimation.appendChild(player);
+        }
+
+        if (startChatButton) {
+            startChatButton.addEventListener('click', () => {
+                window.location.href = '/chat_interface';
+            });
+        }
+    });
+    </script>
+</body>
+</html>
